@@ -31,22 +31,22 @@ from datetime import datetime
 # csvConvert(csv_path, json_path)
 
 
-now = datetime.now() 
+# now = datetime.now() 
 
 
 
-def FindSecond():
-    engine = create_engine('postgresql+psycopg2://postgres:2003@localhost:5432/excel_database')
-    with pd.ExcelFile('Book.xlsx') as xls:
-        df = pd.read_excel(xls)
-        print(df)
-        df.to_sql(name='first_table', con=engine, if_exists='append', index=False)
-    return 0
-FindSecond()
-after = datetime.now()
+# def FindSecond():
+#     engine = create_engine('postgresql+psycopg2://postgres:****@localhost:5432/excel_database')
+#     with pd.ExcelFile('Book.xlsx') as xls:
+#         df = pd.read_excel(xls)
+#         print(df)
+#         df.to_sql(name='first_table', con=engine, if_exists='append', index=False)
+#     return 0
+# FindSecond()
+# after = datetime.now()
 
-total = after - now
-print(total)
+# total = after - now
+# print(total)
 
 
 #read excel file
