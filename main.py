@@ -3,6 +3,7 @@ import json
 from operator import index
 from re import I
 from unicodedata import name
+from urllib import request
 import pandas as pd
 from sqlalchemy import create_engine
 
@@ -43,7 +44,12 @@ csvConvert(csv_path, json_path)
 
 # print(db)
 
-def PrintExcel(request):
-    if i == request.data():
-        i = pd.read_csv('pythonCSV.csv')
+def Base():
+    db = pd.read_excel('Book.xlsx')
+
+# def PrintExcel(request):
+#     if i == request.data():
+#         i = pd.read_csv('pythonCSV.csv')
+
+
 
