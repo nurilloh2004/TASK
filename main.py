@@ -1,6 +1,7 @@
 import csv
 import json
 from operator import index
+from re import I
 from unicodedata import name
 import pandas as pd
 from sqlalchemy import create_engine
@@ -29,8 +30,20 @@ csvConvert(csv_path, json_path)
 
 
 
-engine = create_engine('postgresql+psycopg2://postgres:****@localhost:5432/excel_database')
-with pd.ExcelFile('pythonCSV.xlsx') as xls:
-    df = pd.read_excel(xls)
-    df.ro_sql(name='first_table', con=engine, if_exists='append', index=False)
+# engine = create_engine('postgresql+psycopg2://postgres:****@localhost:5432/excel_database')
+# with pd.ExcelFile('pythonCSV.xlsx') as xls:
+#     df = pd.read_excel(xls)
+#     df.ro_sql(name='first_table', con=engine, if_exists='append', index=False)
+
+
+
+#read excel file
+
+# db = pd.read_csv('pythonCSV.csv')
+
+# print(db)
+
+def PrintExcel(request):
+    if i == request.data():
+        i = pd.read_csv('pythonCSV.csv')
 
